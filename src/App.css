@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#ARButton {
+  bottom: 20%;
+}
+
+.ar-controls {
+  position: fixed;
+  bottom: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 8px;
+
+  padding: 8px;
+
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+
+  z-index: 1200;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ar-controls button {
+  min-width: 75px;
+  height: 55px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #111111;
+
+  padding: 7px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+  touch-action: manipulation;
+}
+
+.ar-controls button span {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.ar-controls button:active {
+  transform: scale(0.94);
+}
+
+@media (max-width: 600px) {
+  .ar-controls {
+    bottom: 27%;
+    width: calc(100% - 30px);
+    max-width: 430px;
+
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .ar-controls button {
+    flex: 1;
+    min-width: 0;
+    height: 58px;
+    padding: 6px 4px;
+  }
+
+  .ar-controls button span {
+    font-size: 9px;
+  }
+}
